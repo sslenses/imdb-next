@@ -16,7 +16,7 @@ export default function Card({result}) {
     duration-200
 
     '>
-        <Link href={`/movie/${result.id}`}/>
+        <Link href={`/movie/${result.id}`}>
         <Image src={`https://image.tmdb.org/t/p/original/${
             result.backdrop_path || result.poster_path}`} 
         width={500}
@@ -26,6 +26,7 @@ export default function Card({result}) {
         transition-opacity
         duration-300
         '></Image>
+        </Link>
         <div className='p-2'>
             <p className='line-clamp-2 text-md'>{result.overview}</p>
             <h2 className='text-lg font-bold truncate'>{result.title || result.original_name}</h2>
