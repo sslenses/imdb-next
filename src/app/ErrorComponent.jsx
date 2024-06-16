@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
-import { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
 export default function ErrorComponent({ error, reset }) {
   useEffect(() => {
-    console.log(error)
-  }, [error])
+    console.log(error);
+  }, [error]);
 
   return (
     <div className='text-center mt-10'>
@@ -14,5 +14,5 @@ export default function ErrorComponent({ error, reset }) {
         Try Again
       </button>
     </div>
-  )
+  );
 }

@@ -1,5 +1,6 @@
 import Results from '@/components/Results';
 import React from 'react';
+import ErrorComponent from '@/app/ErrorComponent';
 
 const API_KEY = process.env.API_KEY;
 
@@ -15,7 +16,7 @@ export default async function Home({ searchParams }) {
 
   const res = await fetch(url);
   if (!res.ok) {
-    throw new Error('Failed to fetch data');
+    throw new ErrorComponent('Failed to fetch data');
   }
 
   const data = await res.json();
