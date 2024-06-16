@@ -14,12 +14,10 @@ export default async function Home({searchParams}) {
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
-  const results = data.results
+  const results = data.results 
 
   return (
   <div>
-{/* Suggested code may be subject to a license. Learn more: ~LicenseLog:1125259082. */}
-{/* Suggested code may be subject to a license. Learn more: ~LicenseLog:1575295136. */}
     <Results results={results}/>
   </div>
     )
